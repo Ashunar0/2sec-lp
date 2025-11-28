@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
+const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "2sec - The Simplest Life Log Camera",
@@ -21,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="dark scroll-smooth">
-      <body className={cn(inter.className, "bg-black text-white antialiased")}>
+      <body
+        className={cn(
+          inter.className,
+          notoSansJP.className,
+          "bg-black text-white antialiased"
+        )}
+      >
         <Navbar />
         {children}
       </body>

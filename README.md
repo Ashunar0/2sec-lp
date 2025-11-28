@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 2sec LP
 
-## Getting Started
+1日のハイライトを「2秒のクリップ」で切り取るカメラアプリ **2sec** のランディングページです。  
+旅先や日常で撮りっぱなしになりがちな動画を、短いクリップで確実に残し、翌日に自動で振り返れる体験を伝えることを目指しています。
 
-First, run the development server:
+## ✨ プロダクト概要
+
+- **上下分割UIで迷わず撮影**  
+  画面上部タップで外カメ、下部タップで内カメ。2秒のカウントダウン後に撮影し、2秒経過したら自動で終了します。
+- **翌日0:10に1本の動画へ**  
+  その日に撮ったクリップは翌日0:10に自動で連結。「動画の準備ができました！」通知で昨日のハイライトを楽しめます。
+- **見返しやすい長さに収まる**  
+  1日30本撮っても完成動画は約1分。移動中や休憩中でもサクッと振り返れます。
+
+## 📱 基本的な使い方
+
+1. **撮影する**  
+   メイン画面の上半分（外カメ）か下半分（内カメ）をタップ。撮影後はプレビューからリテイク・削除もワンタップ。
+2. **エクスポート**  
+   通常は翌日の自動連結を待ちますが、今すぐまとめたいときはホーム右上のアイコンから即エクスポート可能。
+3. **過去の動画を探す**  
+   動画はアプリ内に7日間保存。最大6日前までなら日付を選択して再エクスポートできます。
+
+## 🛠 技術スタック
+
+- Next.js 15 / React Server Components
+- TypeScript
+- Tailwind CSS
+- framer-motion
+- lucide-react
+
+## 🚀 開発環境の整え方
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# http://localhost:3000 でLPを確認
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 ライセンス
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+このリポジトリは個人プロジェクト用のため、無断転載・再配布はご遠慮ください。
