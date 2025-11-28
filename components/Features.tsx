@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Smartphone, Bell, Clock } from "lucide-react";
+import Image from "next/image";
 
 const FeatureItem = ({
   title,
@@ -36,7 +37,7 @@ const FeatureItem = ({
 
 export default function Features() {
   return (
-    <section className="py-32 px-4 relative overflow-hidden">
+    <section id="features" className="py-32 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -51,6 +52,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-sm font-medium tracking-[0.3em] uppercase text-gray-400 text-center mb-16"
+          style={{ textTransform: "none" }}
         >
           2secの特徴
         </motion.p>
@@ -63,16 +65,15 @@ export default function Features() {
             icon={Smartphone}
             delay={0}
           >
-            <div className="w-full h-48 bg-black border border-white/20 rounded-xl relative overflow-hidden flex flex-col">
-              <div className="flex-1 bg-gray-900 flex items-center justify-center border-b border-white/10">
-                <span className="text-xs text-gray-500">TAP TOP (OUT)</span>
-              </div>
-              <div className="flex-1 bg-gray-800 flex items-center justify-center">
-                <span className="text-xs text-gray-500">TAP BOTTOM (IN)</span>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-full h-px bg-accent/50 box-shadow-[0_0_10px_rgba(243,253,83,0.5)]"></div>
-              </div>
+            <div className="w-full flex items-center justify-center">
+              <Image
+                src="/mock1.svg"
+                alt="2sec split camera UI"
+                width={360}
+                height={360}
+                className="w-full max-w-xs md:max-w-sm drop-shadow-[0_0_40px_rgba(243,253,83,0.25)] h-[240px]"
+                priority
+              />
             </div>
           </FeatureItem>
 

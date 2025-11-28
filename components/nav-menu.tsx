@@ -8,12 +8,12 @@ const links = [
 
 export const NavMenu = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("flex items-center gap-6", className)}>
+    <div className={cn("flex items-center gap-10", className)}>
       {links.map((link) => (
-        <Link 
-          key={link.href} 
+        <Link
+          key={link.href}
           href={link.href}
-          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-2"
         >
           {link.label}
         </Link>

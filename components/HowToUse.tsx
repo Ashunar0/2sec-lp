@@ -28,7 +28,7 @@ const steps = [
 
 export default function HowToUse() {
   return (
-    <section className="py-32 px-4 bg-zinc-900/30">
+    <section id="how-to-use" className="py-32 px-4 bg-zinc-900/30">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -43,6 +43,7 @@ export default function HowToUse() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 text-center mb-16"
+          style={{ textTransform: "none" }}
         >
           2secの使い方
         </motion.p>

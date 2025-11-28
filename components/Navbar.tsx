@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { NavMenu } from "@/components/nav-menu";
-import { NavigationSheet } from "@/components/navigation-sheet";
 
 const Navbar = () => {
   return (
@@ -13,10 +12,15 @@ const Navbar = () => {
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-3">
-          <a href="https://apps.apple.com/jp/app/google-%E3%82%A2%E3%83%97%E3%83%AA/id284815942" target="_blank" rel="noopener noreferrer">
-             <Button className="rounded-full bg-white text-black hover:bg-accent hover:text-black font-bold transition-colors">Get Started</Button>
+          <a
+            href="https://apps.apple.com/jp/app/google-%E3%82%A2%E3%83%97%E3%83%AA/id284815942"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="cursor-pointer rounded-full bg-white text-black hover:bg-accent hover:text-black font-bold transition-colors duration-300">
+              Get Started
+            </Button>
           </a>
-          <NavigationSheet />
         </div>
       </div>
     </nav>

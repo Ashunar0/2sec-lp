@@ -2,6 +2,11 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import HowToUse from '@/components/HowToUse';
 import Download from '@/components/Download';
+import Information from '@/components/Information';
+import Footer from '@/components/Footer';
+
+export const dynamic = 'force-static';
+export const revalidate = false;
 
 export default function Home() {
   return (
@@ -10,10 +15,8 @@ export default function Home() {
       <Features />
       <HowToUse />
       <Download />
-      
-      <footer className="py-8 text-center text-gray-800 text-sm">
-        &copy; {new Date().getFullYear()} 2sec. All rights reserved.
-      </footer>
+      <Information />
+      <Footer />
     </main>
   );
 }
