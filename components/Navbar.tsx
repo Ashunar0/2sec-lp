@@ -1,0 +1,26 @@
+import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
+import { NavMenu } from "@/components/nav-menu";
+import { NavigationSheet } from "@/components/navigation-sheet";
+
+const Navbar = () => {
+  return (
+    <nav className="fixed top-6 inset-x-4 h-16 bg-black/50 backdrop-blur-md border border-white/10 max-w-7xl mx-auto rounded-full z-50">
+      <div className="h-full flex items-center justify-between mx-auto px-6">
+        <Logo />
+
+        {/* Desktop Menu */}
+        <NavMenu className="hidden md:block" />
+
+        <div className="flex items-center gap-3">
+          <a href="https://apps.apple.com/jp/app/google-%E3%82%A2%E3%83%97%E3%83%AA/id284815942" target="_blank" rel="noopener noreferrer">
+             <Button className="rounded-full bg-white text-black hover:bg-accent hover:text-black font-bold transition-colors">Get Started</Button>
+          </a>
+          <NavigationSheet />
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
