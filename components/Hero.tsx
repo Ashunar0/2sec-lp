@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-xl md:text-3xl font-light text-gray-300 tracking-wide mb-8"
         >
-          1日を「<span className="text-accent glow-text font-bold">2秒</span>」で残す。
+          1日を「<span className="text-accent glow-text font-bold">2秒</span>」で切り取る。
         </motion.p>
 
         <motion.div

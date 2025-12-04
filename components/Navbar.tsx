@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { NavMenu } from "@/components/nav-menu";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -12,15 +13,15 @@ const Navbar = () => {
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-3">
-          <a
-            href="https://apps.apple.com/jp/app/google-%E3%82%A2%E3%83%97%E3%83%AA/id284815942"
+          <Link
+            href="https://apps.apple.com/us/app/2sec/id6755941014"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button className="cursor-pointer rounded-full bg-white text-black hover:bg-accent hover:text-black font-bold transition-colors duration-300">
               Get Started
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

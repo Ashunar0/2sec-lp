@@ -25,7 +25,7 @@ export default function Download() {
         </p>
         
         <motion.a
-          href="https://apps.apple.com/jp/app/google-%E3%82%A2%E3%83%97%E3%83%AA/id284815942"
+          href="https://apps.apple.com/us/app/2sec/id6755941014"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}

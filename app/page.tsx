@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import Concept from '@/components/Concept';
 import Features from '@/components/Features';
 import HowToUse from '@/components/HowToUse';
 import Download from '@/components/Download';
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-black">
       <Hero />
+      <Concept />
       <Features />
       <HowToUse />
       <Download />
