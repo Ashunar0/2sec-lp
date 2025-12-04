@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import NextImage from 'next/image';
 
-export default function Concept() {
+export default function Concept({ dict }: { dict: any }) {
   return (
     <section className="w-full bg-black py-20 md:py-32 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -15,9 +15,8 @@ export default function Concept() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-bold leading-tight tracking-tight"
-          >
-            旅先で撮った長い動画，<br className="hidden md:block" />見返していますか？
-          </motion.h2>
+            dangerouslySetInnerHTML={{ __html: dict.title }}
+          />
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -26,14 +25,8 @@ export default function Concept() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 text-gray-400 text-lg md:text-xl font-light leading-relaxed"
           >
-            <p>
-              撮りっぱなしで眠っている動画たち。<br />
-              録画停止ボタンを押す手間。
-            </p>
-            <p>
-              <span className="text-accent font-medium">2sec</span>は，そんな悩みから生まれた<br />
-              「<span className="text-white font-medium">2秒間だけ</span>」を切り取るカメラアプリです。
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: dict.p1 }} />
+            <p dangerouslySetInnerHTML={{ __html: dict.p2 }} />
           </motion.div>
         </div>
 

@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "2sec",
+    "subtitle": "1日を「<span class=\"text-accent glow-text font-bold\">2秒</span>」で切り取る。",
+    "caption": "The Simplest Life-Log Camera"
+  },
+  "concept": {
+    "title": "旅先で撮った長い動画，<br class=\"hidden md:block\" />見返していますか？",
+    "p1": "撮りっぱなしで眠っている動画たち。<br />録画停止ボタンを押す手間。",
+    "p2": "<span class=\"text-accent font-medium\">2sec</span>は，そんな悩みから生まれた<br />「<span class=\"text-white font-medium\">2秒間だけ</span>」を切り取るカメラアプリです。"
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "2secの特徴",
+    "items": {
+      "split": {
+        "title": "迷わず撮れる「上下分割」",
+        "description": "アプリを開けば、そこが撮影スタジオ。上半分で外カメラ、下半分で内カメラ。複雑な設定は一切ありません。"
+      },
+      "notification": {
+        "title": "翌日0:10のお楽しみ",
+        "description": "今日撮ったクリップは、翌日の0:10に自動で1本の動画に。「動画の準備ができました！」の通知が、昨日のハイライトを楽しむ合図です。",
+        "mock": {
+          "title": "動画の準備ができました！",
+          "subtitle": "昨日の思い出を見返しましょう。"
+        }
+      },
+      "efficiency": {
+        "title": "「見返せる」長さに",
+        "description": "1日に30回撮影しても、できあがる動画はたったの「1分」。移動中や休憩時間にサクッと見返せる。それが2secの体験です。",
+        "mock": {
+          "clips": "30 clips / day"
+        }
+      }
+    }
+  },
+  "howToUse": {
+    "title": "How to Use",
+    "subtitle": "2secの使い方",
+    "steps": [
+      {
+        "id": "01",
+        "title": "撮影する",
+        "description": "メイン画面の上半分（外カメ）か下半分（内カメ）をタップ。2秒のカウントダウン後に撮影開始。2秒経てば自動で終わります。",
+        "detail": "撮り直しも、削除も、プレビューからワンタップで。"
+      },
+      {
+        "id": "02",
+        "title": "エクスポート",
+        "description": "通常は翌日の通知を待ちますが、「今すぐまとめたい」時も大丈夫。ホーム画面右上のアイコンから、その時点での「今日のまとめ動画」をすぐに作成・保存できます。",
+        "detail": ""
+      },
+      {
+        "id": "03",
+        "title": "過去の動画",
+        "description": "動画はアプリ内に7日間保存されます。「あの日の動画を保存し忘れた」と思っても、6日前までなら日付を選択してエクスポート可能です。",
+        "detail": ""
+      }
+    ]
+  },
+  "download": {
+    "title": "Start <span class=\"text-accent\">2sec</span> Life.",
+    "description": "何気ない日常を、かけがえのない記録に。<br />一番シンプルなライフログカメラを、今すぐ始めましょう。",
+    "button": "Download on App Store",
+    "note": "iOS Only / Free Download"
+  },
+  "information": {
+    "title": "Information",
+    "subtitle": "法的情報とサポート",
+    "support": {
+      "label": "Support",
+      "title": "サポート / お問い合わせ",
+      "description": "アプリの不具合やご要望は、以下のフォームよりご連絡ください。",
+      "link": "フォームを開く"
+    },
+    "terms": {
+      "label": "Terms",
+      "title": "利用規約",
+      "description": "本アプリの利用規約をご確認いただけます。",
+      "link": "規約を読む"
+    },
+    "privacy": {
+      "label": "Privacy",
+      "title": "プライバシーポリシー",
+      "description": "プライバシーポリシーはこちら",
+      "link": "ポリシーを読む"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} 2sec. All rights reserved."
+  },
+  "navbar": {
+    "getStarted": "Get Started"
+  }
+}

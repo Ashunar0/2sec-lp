@@ -35,7 +35,7 @@ const FeatureItem = ({
   );
 };
 
-export default function Features() {
+export default function Features({ dict }: { dict: any }) {
   return (
     <section id="features" className="py-32 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
@@ -45,7 +45,7 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-4 text-center"
         >
-          Features
+          {dict.title}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -54,14 +54,14 @@ export default function Features() {
           className="text-sm font-medium tracking-[0.3em] uppercase text-gray-400 text-center mb-16"
           style={{ textTransform: "none" }}
         >
-          2secの特徴
+          {dict.subtitle}
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Feature 1: Split UI */}
           <FeatureItem
-            title="迷わず撮れる「上下分割」"
-            description="アプリを開けば、そこが撮影スタジオ。上半分で外カメラ、下半分で内カメラ。複雑な設定は一切ありません。"
+            title={dict.items.split.title}
+            description={dict.items.split.description}
             icon={Smartphone}
             delay={0}
           >
@@ -79,8 +79,8 @@ export default function Features() {
 
           {/* Feature 2: Notification */}
           <FeatureItem
-            title="翌日0:10のお楽しみ"
-            description="今日撮ったクリップは、翌日の0:10に自動で1本の動画に。「動画の準備ができました！」の通知が、昨日のハイライトを楽しむ合図です。"
+            title={dict.items.notification.title}
+            description={dict.items.notification.description}
             icon={Bell}
             delay={0.2}
           >
@@ -94,10 +94,10 @@ export default function Features() {
                   </span>
                 </div>
                 <p className="text-xs text-gray-300">
-                  動画の準備ができました！
+                  {dict.items.notification.mock.title}
                 </p>
                 <p className="text-[10px] text-gray-500 mt-1">
-                  昨日の思い出を見返しましょう。
+                  {dict.items.notification.mock.subtitle}
                 </p>
               </div>
             </div>
@@ -105,8 +105,8 @@ export default function Features() {
 
           {/* Feature 3: Efficiency */}
           <FeatureItem
-            title="「見返せる」長さに"
-            description="1日に30回撮影しても、できあがる動画はたったの「1分」。移動中や休憩時間にサクッと見返せる。それが2secの体験です。"
+            title={dict.items.efficiency.title}
+            description={dict.items.efficiency.description}
             icon={Clock}
             delay={0.4}
           >
@@ -128,7 +128,7 @@ export default function Features() {
                     className="h-full bg-accent"
                   />
                 </div>
-                <p className="text-xs text-gray-500 mt-2">30 clips / day</p>
+                <p className="text-xs text-gray-500 mt-2">{dict.items.efficiency.mock.clips}</p>
               </div>
             </div>
           </FeatureItem>

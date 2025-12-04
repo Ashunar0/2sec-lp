@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "2sec",
+    "subtitle": "Capture your day in \"<span class=\"text-accent glow-text font-bold\">2 seconds</span>\".",
+    "caption": "The Simplest Life-Log Camera"
+  },
+  "concept": {
+    "title": "Do you actually watch<br class=\"hidden md:block\" />those long travel videos?",
+    "p1": "Videos left sleeping in your camera roll.<br />The hassle of pressing the stop button.",
+    "p2": "<span class=\"text-accent font-medium\">2sec</span> is a camera app born from these frustrations,<br />capturing \"<span class=\"text-white font-medium\">just 2 seconds</span>\"."
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Features of 2sec",
+    "items": {
+      "split": {
+        "title": "Intuitive \"Split View\"",
+        "description": "Open the app, and you're in the studio. Top half for the outer camera, bottom half for the inner camera. No complex settings."
+      },
+      "notification": {
+        "title": "Fun at 0:10 AM",
+        "description": "Clips taken today are automatically compiled into one video at 0:10 AM the next day. The \"Video is ready!\" notification is your signal to enjoy yesterday's highlights.",
+        "mock": {
+          "title": "Video is ready!",
+          "subtitle": "Let's look back at yesterday's memories."
+        }
+      },
+      "efficiency": {
+        "title": "Watchable Length",
+        "description": "Even if you shoot 30 times a day, the resulting video is only \"1 minute\". Watch it quickly during transit or breaks. That's the 2sec experience.",
+        "mock": {
+          "clips": "30 clips / day"
+        }
+      }
+    }
+  },
+  "howToUse": {
+    "title": "How to Use",
+    "subtitle": "How to use 2sec",
+    "steps": [
+      {
+        "id": "01",
+        "title": "Shoot",
+        "description": "Tap the top half (outer cam) or bottom half (inner cam) of the main screen. Recording starts after a 2-second countdown. It ends automatically after 2 seconds.",
+        "detail": "Retake or delete with one tap from the preview."
+      },
+      {
+        "id": "02",
+        "title": "Export",
+        "description": "Usually, you wait for the next day's notification, but if you want to \"compile now\", that's fine too. You can instantly create and save \"Today's Summary Video\" from the icon on the top right of the home screen.",
+        "detail": ""
+      },
+      {
+        "id": "03",
+        "title": "Past Videos",
+        "description": "Videos are saved in the app for 7 days. Even if you think \"I forgot to save that day's video\", you can select the date and export it up to 6 days ago.",
+        "detail": ""
+      }
+    ]
+  },
+  "download": {
+    "title": "Start <span class=\"text-accent\">2sec</span> Life.",
+    "description": "Turn casual daily life into irreplaceable records.<br />Start the simplest life-log camera now.",
+    "button": "Download on App Store",
+    "note": "iOS Only / Free Download"
+  },
+  "information": {
+    "title": "Information",
+    "subtitle": "Legal & Support",
+    "support": {
+      "label": "Support",
+      "title": "Support / Contact",
+      "description": "Please contact us via the form below for app issues or requests.",
+      "link": "Open Form"
+    },
+    "terms": {
+      "label": "Terms",
+      "title": "Terms of Service",
+      "description": "You can check the terms of service of this application.",
+      "link": "Read Terms"
+    },
+    "privacy": {
+      "label": "Privacy",
+      "title": "Privacy Policy",
+      "description": "Privacy Policy is here.",
+      "link": "Read Policy"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} 2sec. All rights reserved."
+  },
+  "navbar": {
+    "getStarted": "Get Started"
+  }
+}

@@ -9,16 +9,21 @@ import Footer from '@/components/Footer';
 export const dynamic = 'force-static';
 export const revalidate = false;
 
-export default function Home() {
+import { getDictionary } from '@/lib/get-dictionary';
+
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
   return (
     <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-black">
-      <Hero />
-      <Concept />
-      <Features />
-      <HowToUse />
-      <Download />
-      <Information />
-      <Footer />
+      <Hero dict={dict.hero} />
+      <Concept dict={dict.concept} />
+      <Features dict={dict.features} />
+      <HowToUse dict={dict.howToUse} />
+      <Download dict={dict.download} />
+      <Information dict={dict.information} />
+      <Footer dict={dict.footer} />
     </main>
   );
 }

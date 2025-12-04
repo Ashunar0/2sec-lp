@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-export default function Download() {
+export default function Download({ dict }: { dict: any }) {
   return (
     <section className="py-32 px-4 text-center relative overflow-hidden">
        {/* Background Glow */}
@@ -16,13 +16,8 @@ export default function Download() {
         transition={{ duration: 0.8 }}
         className="relative z-10"
       >
-        <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
-          Start <span className="text-accent">2sec</span> Life.
-        </h2>
-        <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-          何気ない日常を、かけがえのない記録に。<br />
-          一番シンプルなライフログカメラを、今すぐ始めましょう。
-        </p>
+        <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter" dangerouslySetInnerHTML={{ __html: dict.title }} />
+        <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: dict.description }} />
         
         <motion.a
           href="https://apps.apple.com/us/app/2sec/id6755941014"
@@ -32,12 +27,12 @@ export default function Download() {
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-accent transition-colors duration-300"
         >
-          Download on App Store
+          {dict.button}
           <ArrowRight size={24} />
         </motion.a>
         
         <p className="mt-8 text-sm text-gray-600">
-          iOS Only / Free Download
+          {dict.note}
         </p>
       </motion.div>
     </section>

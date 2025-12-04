@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import NextImage from 'next/image';
 
-export default function Hero() {
+export default function Hero({ dict }: { dict: any }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-7xl md:text-[10rem] font-bold tracking-tighter leading-none mb-4"
         >
-          2sec
+          {dict.title}
         </motion.h1>
         
         <motion.p 
@@ -40,9 +40,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-xl md:text-3xl font-light text-gray-300 tracking-wide mb-8"
-        >
-          1日を「<span className="text-accent glow-text font-bold">2秒</span>」で切り取る。
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: dict.subtitle }}
+        />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -50,7 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="inline-block mb-12"
         >
-           <p className="text-sm text-gray-500 tracking-widest uppercase">The Simplest Life-Log Camera</p>
+           <p className="text-sm text-gray-500 tracking-widest uppercase">{dict.caption}</p>
         </motion.div>
 
         {/* Mockups Composition */}

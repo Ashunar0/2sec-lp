@@ -26,7 +26,7 @@ const steps = [
   },
 ];
 
-export default function HowToUse() {
+export default function HowToUse({ dict }: { dict: any }) {
   return (
     <section id="how-to-use" className="py-32 px-4 bg-zinc-900/30">
       <div className="max-w-4xl mx-auto">
@@ -36,7 +36,7 @@ export default function HowToUse() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-4 text-center"
         >
-          How to Use
+          {dict.title}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -45,11 +45,11 @@ export default function HowToUse() {
           className="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 text-center mb-16"
           style={{ textTransform: "none" }}
         >
-          2secの使い方
+          {dict.subtitle}
         </motion.p>
 
         <div className="space-y-24">
-          {steps.map((step, index) => (
+          {dict.steps.map((step: any, index: number) => (
             <motion.div
               key={step.id}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}

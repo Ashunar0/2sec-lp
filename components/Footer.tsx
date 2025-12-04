@@ -1,11 +1,11 @@
 'use client';
 
-const Footer = () => {
+const Footer = ({ dict }: { dict: any }) => {
   const year = new Date().getFullYear();
 
   return (
     <footer className="py-8 text-center text-white text-sm">
-      &copy; {year} 2sec. All rights reserved.
+      {dict.copyright.replace('{year}', year.toString())}
     </footer>
   );
 };

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,22 +18,24 @@ import Navbar from "@/components/Navbar";
 
 // ...
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
   return (
-    <html lang="ja" className="dark scroll-smooth">
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={cn(
-          inter.className,
           notoSansJP.className,
           "bg-black text-white antialiased"
         )}
         suppressHydrationWarning={true}
       >
-        <Navbar />
+        <Navbar lang={lang} />
         {children}
       </body>
     </html>
