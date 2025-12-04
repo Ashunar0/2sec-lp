@@ -1,6 +1,8 @@
 'use client';
 
-const Footer = ({ dict }: { dict: any }) => {
+import { Dictionary } from '@/types/dictionary';
+
+const Footer = ({ dict }: { dict: Dictionary['footer'] }) => {
   const year = new Date().getFullYear();
 
   return (

@@ -3,7 +3,9 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-export default function Download({ dict }: { dict: any }) {
+import { Dictionary } from '@/types/dictionary';
+
+export default function Download({ dict }: { dict: Dictionary['download'] }) {
   return (
     <section className="py-32 px-4 text-center relative overflow-hidden">
        {/* Background Glow */}

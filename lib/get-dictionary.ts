@@ -5,7 +5,9 @@ const dictionaries = {
   en: () => import('@/dictionaries/en.json').then((module) => module.default),
 };
 
-export const getDictionary = async (locale: string) => {
+import { Dictionary } from '@/types/dictionary';
+
+export const getDictionary = async (locale: string): Promise<Dictionary> => {
   if (locale === 'en') {
     return dictionaries.en();
   }

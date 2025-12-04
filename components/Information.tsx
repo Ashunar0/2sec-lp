@@ -4,7 +4,9 @@ import { Section } from "@/components/ui/section";
 import { ArrowUpRight, FileText, Mail, Shield } from "lucide-react";
 import Link from "next/link";
 
-export default function Information({ dict }: { dict: any }) {
+import { Dictionary } from '@/types/dictionary';
+
+export default function Information({ dict }: { dict: Dictionary['information'] }) {
   return (
     <Section className="py-8 md:py-12 border-t border-white/10 bg-black/50 backdrop-blur-sm">
       <div className="grid gap-8 md:grid-cols-[200px_1fr]">

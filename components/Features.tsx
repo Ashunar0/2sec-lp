@@ -35,7 +35,9 @@ const FeatureItem = ({
   );
 };
 
-export default function Features({ dict }: { dict: any }) {
+import { Dictionary } from '@/types/dictionary';
+
+export default function Features({ dict }: { dict: Dictionary['features'] }) {
   return (
     <section id="features" className="py-32 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">

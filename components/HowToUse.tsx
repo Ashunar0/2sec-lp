@@ -2,31 +2,11 @@
 
 import { motion } from "framer-motion";
 
-const steps = [
-  {
-    id: "01",
-    title: "撮影する",
-    description:
-      "メイン画面の上半分（外カメ）か下半分（内カメ）をタップ。2秒のカウントダウン後に撮影開始。2秒経てば自動で終わります。",
-    detail: "撮り直しも、削除も、プレビューからワンタップで。",
-  },
-  {
-    id: "02",
-    title: "エクスポート",
-    description:
-      "通常は翌日の通知を待ちますが、「今すぐまとめたい」時も大丈夫。ホーム画面右上のアイコンから、その時点での「今日のまとめ動画」をすぐに作成・保存できます。",
-    detail: "",
-  },
-  {
-    id: "03",
-    title: "過去の動画",
-    description:
-      "動画はアプリ内に7日間保存されます。「あの日の動画を保存し忘れた」と思っても、6日前までなら日付を選択してエクスポート可能です。",
-    detail: "",
-  },
-];
 
-export default function HowToUse({ dict }: { dict: any }) {
+
+import { Dictionary } from "@/types/dictionary";
+
+export default function HowToUse({ dict }: { dict: Dictionary['howToUse'] }) {
   return (
     <section id="how-to-use" className="py-32 px-4 bg-zinc-900/30">
       <div className="max-w-4xl mx-auto">
@@ -49,7 +29,7 @@ export default function HowToUse({ dict }: { dict: any }) {
         </motion.p>
 
         <div className="space-y-24">
-          {dict.steps.map((step: any, index: number) => (
+          {dict.steps.map((step, index) => (
             <motion.div
               key={step.id}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}

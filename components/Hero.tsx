@@ -4,7 +4,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import NextImage from 'next/image';
 
-export default function Hero({ dict }: { dict: any }) {
+import { Dictionary } from '@/types/dictionary';
+
+export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
