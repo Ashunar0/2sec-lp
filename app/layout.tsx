@@ -9,6 +9,9 @@ const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "2sec - The Simplest Life Log Camera",
   description: "1日を「2秒」で残す。一番シンプルなライフログカメラ。",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 import Navbar from "@/components/Navbar";
@@ -28,6 +31,7 @@ export default function RootLayout({
           notoSansJP.className,
           "bg-black text-white antialiased"
         )}
+        suppressHydrationWarning={true}
       >
         <Navbar />
         {children}
