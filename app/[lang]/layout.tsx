@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "2sec - The Simplest Life Log Camera",
   description: "1日を「2秒」で残す。一番シンプルなライフログカメラ。",
   icons: {
-    icon: "/icon.png",
+    icon: "/icon.svg",
   },
 };
 
