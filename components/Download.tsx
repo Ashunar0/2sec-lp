@@ -22,7 +22,7 @@ export default function Download({ dict }: { dict: Dictionary['download'] }) {
         <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: dict.description }} />
         
         <motion.a
-          href="https://apps.apple.com/us/app/2sec/id6755941014"
+          href="https://apps.apple.com/jp/app/2sec/id6755941014"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}

@@ -13,6 +13,18 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
     const [isAttemptingOpen, setIsAttemptingOpen] = useState(true);
 
     useEffect(() => {
+        // Preconnect to external image domain for faster loading
+        const link1 = document.createElement('link');
+        link1.rel = 'preconnect';
+        link1.href = 'https://tools.applemediaservices.com';
+        link1.crossOrigin = 'anonymous';
+        document.head.appendChild(link1);
+
+        const link2 = document.createElement('link');
+        link2.rel = 'dns-prefetch';
+        link2.href = 'https://tools.applemediaservices.com';
+        document.head.appendChild(link2);
+
         if (inviteId) {
             const appUrl = `twosec://friends?inviteId=${inviteId}`;
 
@@ -22,12 +34,21 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                 setIsAttemptingOpen(false);
             }, 1000);
 
-            return () => clearTimeout(timer);
+            return () => {
+                clearTimeout(timer);
+                if (link1.parentNode) link1.parentNode.removeChild(link1);
+                if (link2.parentNode) link2.parentNode.removeChild(link2);
+            };
         }
+
+        return () => {
+            if (link1.parentNode) link1.parentNode.removeChild(link1);
+            if (link2.parentNode) link2.parentNode.removeChild(link2);
+        };
     }, [inviteId]);
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-black px-4 sm:px-6">
+        <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-black px-4 sm:px-6 pt-24 md:pt-32">
             {/* Background Decoration */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-square bg-accent/10 rounded-full blur-[120px]" />
@@ -36,7 +57,7 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className="relative z-10 w-full max-w-[440px]"
             >
                 <div className="bg-zinc-900/50 backdrop-blur-3xl border border-white/10 rounded-[40px] p-8 md:p-10 shadow-2xl relative overflow-hidden">
@@ -45,16 +66,12 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
 
                     <div className="flex flex-col items-center">
                         {/* App Icon */}
-                        <motion.div
-                            initial={{ y: 20 }}
-                            animate={{ y: 0 }}
-                            className="w-24 h-24 mb-8 relative"
-                        >
+                        <div className="w-24 h-24 mb-8 relative">
                             <div className="absolute inset-0 bg-accent blur-2xl opacity-20" />
-                            <div className="relative w-full h-full bg-accent rounded-3xl p-5 shadow-[0_0_40px_rgba(243,253,83,0.3)]">
-                                <NextImage src="/icon.svg" alt="2sec" width={100} height={100} priority />
+                            <div className="relative w-full h-full border-2 border-accent bg-transparent rounded-3xl p-0 shadow-[0_0_40px_rgba(243,253,83,0.3)]">
+                                <NextImage src="/icon.svg" alt="2sec" width={120} height={120} priority />
                             </div>
-                        </motion.div>
+                        </div>
 
                         <h1 className="text-3xl font-bold tracking-tight mb-4 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
                             {dict.title}
@@ -83,7 +100,7 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
-                                    className="text-sm text-zinc-500 text-center min-h-[20px]"
+                                    className={`text-zinc-500 text-center min-h-[20px] ${isAttemptingOpen ? 'text-sm' : 'text-xs'}`}
                                 >
                                     {isAttemptingOpen ? dict.autoOpening : dict.fallbackMessage}
                                 </motion.p>
@@ -101,7 +118,7 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                                 {dict.notInstalled}
                             </p>
                             <a
-                                href="https://apps.apple.com/app/2sec/id6740639906"
+                                href="https://apps.apple.com/jp/app/2sec/id6755941014"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block transition-transform hover:scale-105 active:scale-95"
@@ -113,6 +130,7 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                                     height={53}
                                     className="h-12 w-auto"
                                     unoptimized
+                                    loading="lazy"
                                 />
                             </a>
                         </motion.div>
