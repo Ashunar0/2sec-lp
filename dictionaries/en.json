@@ -91,5 +91,14 @@
   },
   "navbar": {
     "getStarted": "Get Started"
+  },
+  "friends": {
+    "title": "Add as Friend!",
+    "description": "Open 2sec and add {name} to your friends list?",
+    "openApp": "Open App",
+    "notInstalled": "If you don't have the app yet",
+    "download": "Download on App Store",
+    "autoOpening": "Opening app...",
+    "fallbackMessage": "If the app doesn't open automatically, tap here."
   }
 }

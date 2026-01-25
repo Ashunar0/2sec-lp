@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "CPRXLT5UN9.com.yushi.2sec",
+        "paths": ["/friends*", "/notifications*"]
+      }
+    ]
+  }
+}

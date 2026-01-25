@@ -91,5 +91,14 @@
   },
   "navbar": {
     "getStarted": "Get Started"
+  },
+  "friends": {
+    "title": "フレンドに追加しましょう！",
+    "description": "2secを開いて、{name}さんをあなたのフレンドに追加しますか？",
+    "openApp": "アプリを開く",
+    "notInstalled": "アプリをまだ持っていない場合",
+    "download": "App Storeでダウンロード",
+    "autoOpening": "アプリを起動しています...",
+    "fallbackMessage": "アプリが自動で開かない場合は、こちらをタップしてください。"
   }
 }

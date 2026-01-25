@@ -78,4 +78,13 @@ export interface Dictionary {
   navbar: {
     getStarted: string;
   };
+  friends: {
+    title: string;
+    description: string;
+    openApp: string;
+    notInstalled: string;
+    download: string;
+    autoOpening: string;
+    fallbackMessage: string;
+  };
 }
