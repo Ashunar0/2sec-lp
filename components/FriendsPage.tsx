@@ -112,6 +112,7 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                                     width={160}
                                     height={53}
                                     className="h-12 w-auto"
+                                    unoptimized
                                 />
                             </a>
                         </motion.div>
