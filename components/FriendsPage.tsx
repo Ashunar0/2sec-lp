@@ -13,78 +13,77 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
     const [isAttemptingOpen, setIsAttemptingOpen] = useState(true);
 
     useEffect(() => {
-        // Preconnect to external image domain for faster loading
-        const link1 = document.createElement('link');
-        link1.rel = 'preconnect';
-        link1.href = 'https://tools.applemediaservices.com';
-        link1.crossOrigin = 'anonymous';
-        document.head.appendChild(link1);
-
-        const link2 = document.createElement('link');
-        link2.rel = 'dns-prefetch';
-        link2.href = 'https://tools.applemediaservices.com';
-        document.head.appendChild(link2);
+        // Preconnect only if necessary
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = 'https://tools.applemediaservices.com';
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
 
         if (inviteId) {
             const appUrl = `twosec://friends?inviteId=${inviteId}`;
 
-            // Try to open the app automatically after a short delay
+            // Faster auto-open for better UX (1000ms -> 300ms)
             const timer = setTimeout(() => {
                 window.location.href = appUrl;
                 setIsAttemptingOpen(false);
-            }, 1000);
+            }, 300);
 
             return () => {
                 clearTimeout(timer);
-                if (link1.parentNode) link1.parentNode.removeChild(link1);
-                if (link2.parentNode) link2.parentNode.removeChild(link2);
+                if (link.parentNode) link.parentNode.removeChild(link);
             };
         }
 
         return () => {
-            if (link1.parentNode) link1.parentNode.removeChild(link1);
-            if (link2.parentNode) link2.parentNode.removeChild(link2);
+            if (link.parentNode) link.parentNode.removeChild(link);
         };
     }, [inviteId]);
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-black px-4 sm:px-6 pt-24 md:pt-32">
-            {/* Background Decoration */}
+        <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-black px-4 sm:px-6 pt-20">
+            {/* Optimized Background Decoration */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-square bg-accent/10 rounded-full blur-[120px]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[100px]" />
             </div>
 
             <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative z-10 w-full max-w-[440px]"
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="relative z-10 w-full max-w-[400px]"
             >
-                <div className="bg-zinc-900/50 backdrop-blur-3xl border border-white/10 rounded-[40px] p-8 md:p-10 shadow-2xl relative overflow-hidden">
-                    {/* Top Accent Gradient */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+                <div className="bg-zinc-900/40 backdrop-blur-2xl border border-white/10 rounded-[40px] p-8 md:p-10 shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
                     <div className="flex flex-col items-center">
-                        {/* App Icon */}
-                        <div className="w-24 h-24 mb-8 relative">
-                            <div className="absolute inset-0 bg-accent blur-2xl opacity-20" />
-                            <div className="relative w-full h-full border-2 border-accent bg-transparent rounded-3xl p-0 shadow-[0_0_40px_rgba(243,253,83,0.3)]">
-                                <NextImage src="/icon.svg" alt="2sec" width={120} height={120} priority />
+                        {/* Lightweight App Icon replacement */}
+                        <div className="w-20 h-20 mb-8 relative">
+                            <div className="absolute inset-0 bg-accent blur-2xl opacity-10" />
+                            <div className="relative w-full h-full border border-accent/50 bg-black rounded-2xl p-0.5 shadow-[0_0_30px_rgba(243,253,83,0.15)] overflow-hidden">
+                                <NextImage
+                                    src="/4-Layer.png"
+                                    alt="2sec"
+                                    width={80}
+                                    height={80}
+                                    className="object-cover rounded-[14px]"
+                                    priority
+                                />
                             </div>
                         </div>
 
-                        <h1 className="text-3xl font-bold tracking-tight mb-4 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+                        <h1 className="text-2xl font-bold tracking-tight mb-3 text-white">
                             {dict.title}
                         </h1>
 
-                        <p className="text-zinc-400 mb-10 text-center leading-relaxed text-lg">
+                        <p className="text-zinc-400 mb-8 text-center leading-relaxed text-base">
                             {dict.description.replace('{name}', inviteId || '...')}
                         </p>
 
                         <div className="w-full space-y-4">
                             <Button
                                 size="lg"
-                                className="w-full h-16 text-xl font-bold rounded-2xl bg-white text-black hover:bg-zinc-200 transition-all duration-300 shadow-lg shadow-white/5 active:scale-95 transition-transform"
+                                className="w-full h-14 text-lg font-bold rounded-xl bg-white text-black hover:bg-zinc-200 active:scale-[0.98] transition-all"
                                 onClick={() => {
                                     if (inviteId) {
                                         window.location.href = `twosec://friends?inviteId=${inviteId}`;
@@ -94,27 +93,14 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                                 {dict.openApp}
                             </Button>
 
-                            <AnimatePresence mode="wait">
-                                <motion.p
-                                    key={isAttemptingOpen ? 'opening' : 'fallback'}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    className={`text-zinc-500 text-center min-h-[20px] ${isAttemptingOpen ? 'text-sm' : 'text-xs'}`}
-                                >
-                                    {isAttemptingOpen ? dict.autoOpening : dict.fallbackMessage}
-                                </motion.p>
-                            </AnimatePresence>
+                            <p className={`text-zinc-500 text-center text-xs min-h-[16px]`}>
+                                {isAttemptingOpen ? dict.autoOpening : dict.fallbackMessage}
+                            </p>
                         </div>
 
                         {/* App Store Section */}
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.8 }}
-                            className="mt-12 w-full pt-8 border-t border-white/5 flex flex-col items-center"
-                        >
-                            <p className="text-sm font-medium text-zinc-400 mb-5">
+                        <div className="mt-10 w-full pt-8 border-t border-white/5 flex flex-col items-center">
+                            <p className="text-xs font-medium text-zinc-500 mb-4">
                                 {dict.notInstalled}
                             </p>
                             <a
@@ -124,16 +110,15 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                                 className="inline-block transition-transform hover:scale-105 active:scale-95"
                             >
                                 <NextImage
-                                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                                    src="/apple-badge.svg"
                                     alt="Download on the App Store"
-                                    width={160}
-                                    height={53}
-                                    className="h-12 w-auto"
-                                    unoptimized
-                                    loading="lazy"
+                                    width={135}
+                                    height={45}
+                                    className="h-10 w-auto"
+                                    priority
                                 />
                             </a>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </motion.div>
@@ -145,7 +130,7 @@ export default function FriendsPage({ dict }: { dict: Dictionary['friends'] }) {
     return (
         <Suspense fallback={
             <div className="min-h-screen bg-black flex items-center justify-center">
-                <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+                <div className="w-6 h-6 border-2 border-accent border-t-transparent rounded-full animate-spin" />
             </div>
         }>
             <FriendsPageContent dict={dict} />
