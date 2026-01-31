@@ -55,9 +55,7 @@ export default function Information({ dict }: { dict: Dictionary['information'] 
               {dict.terms.description}
             </p>
             <Link
-              href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/terms"
               className="mt-auto pt-2 flex items-center gap-1 text-[10px] text-white hover:text-accent transition-colors w-fit group/link"
             >
               {dict.terms.link} <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
