@@ -36,7 +36,22 @@ export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
         >
           {dict.title}
         </motion.h1>
-        
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          className="mb-6"
+        >
+          <NextImage
+            src="/2sec_logo.png"
+            alt=""
+            width={200}
+            height={80}
+            className="h-16 w-auto object-contain md:h-20 drop-shadow-[0_0_24px_rgba(243,253,83,0.12)]"
+            priority
+            aria-hidden
+          />
+        </motion.div>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

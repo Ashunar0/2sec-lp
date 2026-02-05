@@ -17,7 +17,7 @@ const Navbar = ({ lang = 'ja' }: { lang?: string }) => {
             {lang === 'en' ? 'JP' : 'EN'}
           </Link>
           <Link
-            href="https://apps.apple.com/jp/app/2sec/id6755941014"
+            href="https://apps.apple.com/us/app/2sec/id6755941014"
             target="_blank"
             rel="noopener noreferrer"
           >
