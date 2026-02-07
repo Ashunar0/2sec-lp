@@ -24,11 +24,11 @@ export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
       </div>
 
-      <motion.div 
-        style={{ y, opacity }} 
+      <motion.div
+        style={{ y, opacity }}
         className="relative z-10 text-center px-4 flex flex-col items-center mt-10 md:mt-20"
       >
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,23 +36,8 @@ export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
         >
           {dict.title}
         </motion.h1>
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="mb-6"
-        >
-          <NextImage
-            src="/2sec_logo.png"
-            alt=""
-            width={200}
-            height={80}
-            className="h-16 w-auto object-contain md:h-20 drop-shadow-[0_0_24px_rgba(243,253,83,0.12)]"
-            priority
-            aria-hidden
-          />
-        </motion.div>
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -66,7 +51,7 @@ export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="inline-block mb-12"
         >
-           <p className="text-sm text-gray-500 tracking-widest uppercase">{dict.caption}</p>
+          <p className="text-sm text-gray-500 tracking-widest uppercase">{dict.caption}</p>
         </motion.div>
 
         {/* Mockups Composition */}
@@ -78,18 +63,18 @@ export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
             transition={{ duration: 1, delay: 0.4 }}
             className="absolute left-1/2 -translate-x-1/2 top-0 w-[200px] md:w-[300px] z-20"
           >
-             <motion.div
-               animate={{ y: [0, -20, 0] }}
-               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-             >
-               <NextImage src="/mock4.svg" alt="App Screen" width={300} height={600} className="drop-shadow-[0_0_50px_rgba(243,253,83,0.2)]" />
-             </motion.div>
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <NextImage src="/mock4.svg" alt="App Screen" width={300} height={600} className="drop-shadow-[0_0_50px_rgba(243,253,83,0.2)]" />
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
