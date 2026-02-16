@@ -7,7 +7,7 @@
   "concept": {
     "title": "旅先で撮った長い動画，<br class=\"hidden md:block\" />見返していますか？",
     "p1": "撮りっぱなしで眠っている動画たち。<br />録画停止ボタンを押す手間。",
-    "p2": "<span class=\"text-accent font-medium\">2sec</span>は，そんな悩みから生まれた<br />「<span class=\"text-white font-medium\">2秒間だけ</span>」を切り取るカメラアプリです。"
+    "p2": "<span class=\"brand-text\">2sec</span>は，そんな悩みから生まれた<br />「<span class=\"text-white font-medium\">2秒間だけ</span>」を切り取るカメラアプリです。"
   },
   "features": {
     "title": "Features",
@@ -59,7 +59,7 @@
     ]
   },
   "download": {
-    "title": "Start <span class=\"text-accent\">2sec</span> Life.",
+    "title": "Start <span class=\"brand-text\">2sec</span> Life.",
     "description": "何気ない日常を、かけがえのない記録に。<br />一番シンプルなライフログカメラを、今すぐ始めましょう。",
     "button": "Download on App Store",
     "note": "iOS Only / Free Download"
@@ -94,7 +94,7 @@
   },
   "friends": {
     "title": "フレンドに追加しましょう！",
-    "description": "2secを開いて、{name}さんをあなたのフレンドに追加しますか？",
+    "description": "<span class=\"brand-text px-1\">2sec</span>を開いて、{name}さんをあなたのフレンドに追加しますか？",
     "openApp": "アプリを開く",
     "notInstalled": "アプリをまだ持っていない場合",
     "download": "App Storeでダウンロード",

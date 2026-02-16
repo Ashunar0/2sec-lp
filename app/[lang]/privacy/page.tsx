@@ -26,7 +26,7 @@ export default async function PrivacyPolicy({ params: { lang } }: { params: { la
             </p>
 
             <p className="mb-8 text-zinc-300">
-              Thank you for using <strong>2sec</strong> (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, and protect your information.
+              Thank you for using <span className="brand-text text-xs align-baseline mx-0.5">2sec</span> (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, and protect your information.
             </p>
 
             <h2 className="text-xl font-bold mt-12 mb-4 text-white">1. Information We Collect and How We Use It</h2>

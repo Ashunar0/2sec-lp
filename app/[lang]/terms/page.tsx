@@ -26,7 +26,7 @@ export default async function TermsOfUse({ params: { lang } }: { params: { lang:
                         </p>
 
                         <p className="mb-8 text-zinc-300">
-                            By downloading or using the <strong>2sec</strong> application, these terms will automatically apply to you.
+                            By downloading or using the <span className="brand-text text-xs align-baseline mx-0.5">2sec</span> application, these terms will automatically apply to you.
                         </p>
 
                         <h2 className="text-xl font-bold mt-12 mb-4 text-white">1. Standard EULA</h2>
@@ -38,7 +38,7 @@ export default async function TermsOfUse({ params: { lang } }: { params: { lang:
 
                         <h2 className="text-xl font-bold mt-12 mb-4 text-white">2. User-Generated Content (UGC) Policy</h2>
                         <p className="text-zinc-400 mb-4">
-                            &quot;2sec&quot; allows users to share short video clips with friends and the community. To ensure a safe experience, we have a Zero-Tolerance Policy regarding objectionable content.
+                            <span className="brand-text text-xs align-baseline mx-0.5">2sec</span> allows users to share short video clips with friends and the community. To ensure a safe experience, we have a Zero-Tolerance Policy regarding objectionable content.
                         </p>
 
                         <h3 className="text-lg font-semibold mt-8 mb-2 text-zinc-200">Prohibited Content:</h3>

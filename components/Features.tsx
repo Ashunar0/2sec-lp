@@ -90,7 +90,7 @@ export default function Features({ dict }: { dict: Dictionary['features'] }) {
               <div className="bg-gray-900 border border-white/10 rounded-xl p-4 w-full max-w-[240px] shadow-2xl">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-5 h-5 rounded bg-accent"></div>
-                  <span className="text-xs font-bold text-white">2sec</span>
+                  <span className="text-[10px] brand-text">2sec</span>
                   <span className="text-[10px] text-gray-500 ml-auto">
                     0:10
                   </span>

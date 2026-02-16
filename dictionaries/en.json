@@ -7,7 +7,7 @@
   "concept": {
     "title": "Do you actually watch<br class=\"hidden md:block\" />those long travel videos?",
     "p1": "Videos left sleeping in your camera roll.<br />The hassle of pressing the stop button.",
-    "p2": "<span class=\"text-accent font-medium\">2sec</span> is a camera app born from these frustrations,<br />capturing \"<span class=\"text-white font-medium\">just 2 seconds</span>\"."
+    "p2": "<span class=\"brand-text\">2sec</span> is a camera app born from these frustrations,<br />capturing \"<span class=\"text-white font-medium\">just 2 seconds</span>\"."
   },
   "features": {
     "title": "Features",
@@ -59,7 +59,7 @@
     ]
   },
   "download": {
-    "title": "Start <span class=\"text-accent\">2sec</span> Life.",
+    "title": "Start <span class=\"brand-text\">2sec</span> Life.",
     "description": "Turn casual daily life into irreplaceable records.<br />Start the simplest life-log camera now.",
     "button": "Download on App Store",
     "note": "iOS Only / Free Download"
@@ -94,7 +94,7 @@
   },
   "friends": {
     "title": "Add as Friend!",
-    "description": "Open 2sec and add {name} to your friends list?",
+    "description": "Open <span class=\"brand-text px-1\">2sec</span> and add {name} to your friends list?",
     "openApp": "Open App",
     "notInstalled": "If you don't have the app yet",
     "download": "Download on App Store",

@@ -2,7 +2,29 @@
 
 @theme {
   --color-accent: hsl(64 98% 66%);
+  --font-sf-pro: "SF Pro Text", "SF Pro Display", system-ui, -apple-system, sans-serif;
 }
+
+.font-sf {
+  font-family: var(--font-sf-pro);
+}
+
+.brand-skew {
+  transform: skewX(-6deg);
+}
+
+
+.brand-text {
+  font-family: var(--font-sf-pro);
+  font-weight: 800;
+  transform: skewX(-6deg);
+  display: inline-flex;
+  color: var(--color-accent);
+}
+
+
+
+
 
 @layer base {
   :root {

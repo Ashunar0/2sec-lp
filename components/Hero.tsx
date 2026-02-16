@@ -29,12 +29,13 @@ export default function Hero({ dict }: { dict: Dictionary['hero'] }) {
         className="relative z-10 text-center px-4 flex flex-col items-center mt-10 md:mt-20"
       >
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, skewX: -6 }}
+          animate={{ opacity: 1, y: 0, skewX: -6 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-7xl md:text-[10rem] font-bold tracking-tighter leading-none mb-4"
+          className="font-extrabold tracking-tighter leading-none mb-4 font-sf text-accent flex items-baseline justify-center"
         >
-          {dict.title}
+          <span className="text-7xl md:text-[10rem]">2</span>
+          <span className="text-5xl md:text-[6.6rem] uppercase">sec</span>
         </motion.h1>
 
         <motion.p

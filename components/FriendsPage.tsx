@@ -76,9 +76,10 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                             {dict.title}
                         </h1>
 
-                        <p className="text-zinc-400 mb-8 text-center leading-relaxed text-base">
-                            {dict.description.replace('{name}', inviteId || '...')}
-                        </p>
+                        <p
+                            className="text-zinc-400 mb-8 text-center leading-relaxed text-base"
+                            dangerouslySetInnerHTML={{ __html: dict.description.replace('{name}', inviteId || '...') }}
+                        />
 
                         <div className="w-full space-y-4">
                             <Button
