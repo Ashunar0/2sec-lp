@@ -99,26 +99,29 @@ function FriendsPageContent({ dict }: { dict: Dictionary['friends'] }) {
                             </p>
                         </div>
 
-                        {/* App Store Section */}
+                        {/* Download Section */}
                         <div className="mt-10 w-full pt-8 border-t border-white/5 flex flex-col items-center">
-                            <p className="text-xs font-medium text-zinc-500 mb-4">
+                            <p className="text-xs font-medium text-zinc-500 mb-6">
                                 {dict.notInstalled}
                             </p>
-                            <a
-                                href="https://apps.apple.com/jp/app/2sec/id6755941014"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block transition-transform hover:scale-105 active:scale-95"
-                            >
-                                <NextImage
-                                    src="/apple-badge.svg"
-                                    alt="Download on the App Store"
-                                    width={135}
-                                    height={45}
-                                    className="h-10 w-auto"
-                                    priority
-                                />
-                            </a>
+
+                            <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
+                                <a
+                                    href="https://apps.apple.com/jp/app/2sec/id6755941014"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 w-full transition-transform hover:scale-105 active:scale-95 flex items-center justify-center bg-white text-black py-3 px-4 rounded-xl font-bold text-sm"
+                                >
+                                    {dict.download}
+                                </a>
+
+                                <a
+                                    href="/#download"
+                                    className="flex-1 w-full transition-transform hover:scale-105 active:scale-95 flex items-center justify-center bg-zinc-800 text-white py-3 px-4 rounded-xl font-bold text-sm border border-white/5"
+                                >
+                                    {dict.downloadAndroid}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

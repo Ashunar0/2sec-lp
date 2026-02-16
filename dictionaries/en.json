@@ -61,8 +61,22 @@
   "download": {
     "title": "Start <span class=\"brand-text\">2sec</span> Life.",
     "description": "Turn casual daily life into irreplaceable records.<br />Start the simplest life-log camera now.",
-    "button": "Download on App Store",
-    "note": "iOS Only / Free Download"
+    "ios": {
+      "button": "Download on App Store",
+      "note": "iOS Version"
+    },
+    "android": {
+      "button": "Download for Android (APK)",
+      "note": "Preview version available",
+      "link": "https://expo.dev/accounts/asapp2/projects/2sec-video-app/builds/7e9045b4-2747-4431-8151-c98e853d8608",
+      "installTitle": "How to install on Android",
+      "steps": [
+        "Open the provided APK download link",
+        "Tap the downloaded APK to install",
+        "If prompted to allow 'unknown sources', please follow the instructions to allow it",
+        "(Manual permission may be needed in Settings → Security or Apps)"
+      ]
+    }
   },
   "information": {
     "title": "Information",
@@ -97,7 +111,8 @@
     "description": "Open <span class=\"brand-text px-1\">2sec</span> and add {name} to your friends list?",
     "openApp": "Open App",
     "notInstalled": "If you don't have the app yet",
-    "download": "Download on App Store",
+    "download": "Download for iOS",
+    "downloadAndroid": "Download for Android (APK)",
     "autoOpening": "Opening app...",
     "fallbackMessage": "If the app doesn't open automatically, tap here."
   }

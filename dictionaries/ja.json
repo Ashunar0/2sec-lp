@@ -61,8 +61,22 @@
   "download": {
     "title": "Start <span class=\"brand-text\">2sec</span> Life.",
     "description": "何気ない日常を、かけがえのない記録に。<br />一番シンプルなライフログカメラを、今すぐ始めましょう。",
-    "button": "Download on App Store",
-    "note": "iOS Only / Free Download"
+    "ios": {
+      "button": "App Storeでダウンロード",
+      "note": "iOS版"
+    },
+    "android": {
+      "button": "Android版 (APK) をダウンロード",
+      "note": "プレビュー版をご利用いただけます",
+      "link": "https://expo.dev/accounts/asapp2/projects/2sec-video-app/builds/7e9045b4-2747-4431-8151-c98e853d8608",
+      "installTitle": "Android版のインストール手順",
+      "steps": [
+        "配布された APK のダウンロードリンクを開く",
+        "ダウンロードした APK をタップしてインストール",
+        "「提供元不明のアプリ」の許可を求められた場合は、指示に従って許可してください",
+        "（設定 → セキュリティ または アプリ で個別に許可が必要な場合があります）"
+      ]
+    }
   },
   "information": {
     "title": "Information",
@@ -97,7 +111,8 @@
     "description": "<span class=\"brand-text px-1\">2sec</span>を開いて、{name}さんをあなたのフレンドに追加しますか？",
     "openApp": "アプリを開く",
     "notInstalled": "アプリをまだ持っていない場合",
-    "download": "App Storeでダウンロード",
+    "download": "iOS版をダウンロード",
+    "downloadAndroid": "Android版 (APK) をダウンロード",
     "autoOpening": "アプリを起動しています...",
     "fallbackMessage": "アプリが自動で開かない場合は、こちらをタップしてください。"
   }

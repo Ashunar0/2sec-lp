@@ -47,8 +47,17 @@ export interface Dictionary {
   download: {
     title: string;
     description: string;
-    button: string;
-    note: string;
+    ios: {
+      button: string;
+      note: string;
+    };
+    android: {
+      button: string;
+      note: string;
+      link: string;
+      installTitle: string;
+      steps: string[];
+    };
   };
   information: {
     title: string;
@@ -84,6 +93,7 @@ export interface Dictionary {
     openApp: string;
     notInstalled: string;
     download: string;
+    downloadAndroid: string;
     autoOpening: string;
     fallbackMessage: string;
   };
