@@ -58,52 +58,64 @@ export default function Download({ dict }: { dict: Dictionary['download'] }) {
           </div>
         </div>
 
-        {/* Android Instructions Section */}
         <AnimatePresence>
           {showAndroidSteps && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.4 }}
+              className="mt-16 max-w-2xl mx-auto text-left bg-zinc-900/40 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative"
             >
-              <div className="mt-12 max-w-xl mx-auto text-left bg-zinc-900/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                  <CheckCircle2 className="text-accent" size={24} />
-                  {dict.android.installTitle}
-                </h3>
+              <div className="absolute top-0 left-12 right-12 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
-                {/* APK Download Link */}
-                <div className="mb-8 p-6 bg-accent/10 border border-accent/20 rounded-2xl flex flex-col items-center gap-4">
-                  <p className="text-sm font-medium text-accent">Step 0: APKファイルをダウンロード</p>
-                  <a
-                    href={dict.android.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-accent text-black py-4 rounded-xl font-extrabold text-xl hover:bg-white transition-colors duration-300 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(243,253,83,0.3)]"
-                  >
-                    APKをダウンロード
-                  </a>
-                  <p className="text-[10px] text-accent/60">※ ダウンロード後、以下の手順でインストールしてください</p>
+              <h3 className="text-3xl font-bold mb-10 tracking-tight text-white flex items-center gap-3">
+                <CheckCircle2 className="text-accent" size={28} />
+                {dict.android.installTitle}
+              </h3>
+
+              <div className="space-y-12">
+                {/* Step 0: Primary Action Card */}
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-accent/20 to-transparent rounded-[2rem] blur opacity-25 group-hover:opacity-40 transition duration-500" />
+                  <div className="relative bg-black/40 border border-white/5 rounded-[1.8rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+                    <div className="flex-1 text-center md:text-left">
+                      <span className="text-xs font-black uppercase tracking-[0.2em] text-accent/60 mb-2 block">Step 0</span>
+                      <h4 className="text-xl font-bold text-white">APKファイルのダウンロード</h4>
+                      <p className="text-sm text-zinc-500 mt-1 leading-relaxed">
+                        まずは最新のパッケージを端末に取得します。
+                      </p>
+                    </div>
+                    <a
+                      href={dict.android.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full md:w-auto px-10 py-4 bg-accent text-black rounded-2xl font-black text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(243,253,83,0.2)]"
+                    >
+                      APKをダウンロード
+                    </a>
+                  </div>
                 </div>
 
-                <div className="space-y-4">
+                {/* Manual Steps */}
+                <div className="space-y-8 pl-2">
                   {dict.android.steps.map((step, index) => (
-                    <div key={index} className="flex gap-4">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent font-bold text-sm">
+                    <div key={index} className="flex gap-6 items-start">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-zinc-800/50 border border-white/10 flex items-center justify-center text-accent font-bold text-sm">
                         {index + 1}
-                      </span>
-                      <p className="text-gray-300 pt-1">{step}</p>
+                      </div>
+                      <p className="text-zinc-400 text-[1.05rem] leading-relaxed pt-0.5">
+                        {step}
+                      </p>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                <div className="mt-8 p-4 bg-accent/5 border border-accent/10 rounded-2xl">
-                  <p className="text-xs text-accent/70 leading-relaxed text-center">
-                    ※ 現在Android版はプレビュー配信のため、直接APKファイルをインストールしていただく形式となります。近日中にGoogle Playストアでも公開予定です。
-                  </p>
-                </div>
+              <div className="mt-12 pt-8 border-t border-white/5 text-center">
+                <p className="text-[11px] text-zinc-600 leading-relaxed max-w-md mx-auto italic">
+                  ※ 現在Android版はプレビュー配信のため、直接APKファイルをインストールしていただく形式となります。近日中にGoogle Playストアでも公開予定です。
+                </p>
               </div>
             </motion.div>
           )}
